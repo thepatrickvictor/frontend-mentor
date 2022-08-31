@@ -5,7 +5,11 @@ let rated = document.querySelector('.ratedNumber');
 const rateButtons = document.querySelectorAll('.numbers')
 let rate = 0
 
-
+rateButtons.forEach(numbers =>{
+    numbers.addEventListener('click', function() {
+        rate=this.innerHTML
+    });
+})
 
 submitButton.addEventListener('click', rateChanger)
 function rateChanger (){
